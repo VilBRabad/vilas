@@ -145,7 +145,7 @@ function About2() {
                         exit= {{opacity: 0}}
                         transition= {{ease: "easeInOut", duration: 0.7}}
                         className='grid-span bg-slate-900 p-4 flex items-center justify-center'>
-                        <p className='text-[1.7rem] font-bold'>Certifications</p>
+                        <p className='text-[1.7rem] font-bold text-white/20'>Certifications</p>
                     </motion.div>
                     <motion.div 
                         initial= {{opacity: 0}}
@@ -153,7 +153,7 @@ function About2() {
                         exit= {{opacity: 0}}
                         transition= {{ease: "easeInOut", duration: 1}}
                         className='grid-span bg-slate-900 p-4 flex items-center justify-center'>
-                        <p className='text-[2rem] md:text-[3rem] font-bold'>CV</p>
+                        <a href='https://drive.google.com/file/d/1aMisw2rp8EYH5cBc86GobDGEn7D3RdM3/view?usp=drive_link' target='_blank' className='text-[2rem] md:text-[3rem] font-bold'>CV</a>
                     </motion.div>
                     <motion.div 
                         initial= {{opacity: 0}}
