@@ -66,7 +66,7 @@ function About2() {
                         exit= {{opacity: 0}}
                         transition= {{ease: "easeInOut", duration: 0.8}}
                         className='grid-span flex items-center justify-center'>
-                        <img src="assets/photo.jpg" alt="" className='max-md:w-[20rem]'/>
+                        <img src="assets/photo2.jpeg" alt="" className='max-md:w-[20rem]'/>
                     </motion.div>
                     <motion.div 
                         initial= {{opacity: 0}}
