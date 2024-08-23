@@ -135,9 +135,15 @@ function About2() {
                         exit= {{opacity: 0}}
                         transition= {{ease: "easeInOut", duration: 0.5}}
                         className='grid-span bg-slate-900 px-2 max-[590px]:py-6 sm:p-4 flex gap-2 sm:gap-4 items-center justify-center'>
-                        <FaGithub size={35} className='cursor-pointer' />
-                        <FaLinkedin size={35} className='cursor-pointer' />
-                        <SiLeetcode size={35} className='cursor-pointer' />
+                            <a href="https://github.com/VilBRabad" target='_blank'>
+                                <FaGithub size={35} className='cursor-pointer' />
+                            </a>
+                            <a href="https://www.linkedin.com/in/vilas-rabad-3a8081211">
+                                <FaLinkedin size={35} className='cursor-pointer' />
+                            </a>
+                            <a href="https://leetcode.com/u/Rabadvilas/">
+                                <SiLeetcode size={35} className='cursor-pointer' />
+                            </a>
                     </motion.div>
                     <motion.div 
                         initial= {{opacity: 0}}
