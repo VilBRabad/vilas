@@ -24,6 +24,12 @@ function ProjectDetails() {
         <title>{project_data[id-1].title}</title>
         <meta name='description' content={`Project: ${project_data[id-1].sort_hand}`}/>
         <link rel="canonical" href={`https://vilas-steel.vercel.app/project?id=${id}`} />
+
+        <meta property="og:title" content={project_data[id-1].title} />
+        <meta property="og:description" content={project_data[id-1].sort_hand} />
+        <meta property="og:image" content={project_data[id-1].home_img} />
+        <meta property="og:url" content={`https://vilas-steel.vercel.app/project?id=${id}`} />
+        <meta property="og:type" content="website" />
     </Helmet>
     <div className='min-h-screen w-screen text-white flex justify-center'>
         <div className='relative project-det-container mt-6 pb-14'>
