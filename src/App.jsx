@@ -5,7 +5,7 @@ import { lazy, Suspense } from "react";
 const ProjectDetails = lazy(() => import('./components/ProjectDetails'));
 const HomePage = lazy(() => import("./components/HomePage"));
 const Error = lazy(() => import("./components/Error"));
-import {SyncLoader} from "react-spinners";
+import { SyncLoader } from "react-spinners";
 
 function App() {
 
@@ -18,7 +18,7 @@ function App() {
           <Route path='/' element={
             <Suspense fallback={
               <div className="h-screen w-screen bg-gradient-to-br from-slate-800 to-zinc-800 text-[#758694] flex gap-2 items-center justify-center">
-                <SyncLoader size={8} color="#758694"/>
+                <SyncLoader size={8} color="#758694" />
                 <p className="font-semibold">Loading...</p>
               </div>
             }>
@@ -28,7 +28,7 @@ function App() {
           <Route path='/project' element={
             <Suspense fallback={
               <div className="h-screen w-screen bg-gradient-to-br from-slate-800 to-zinc-800 text-[#758694] flex gap-2 items-center justify-center">
-                <SyncLoader size={8} color="#758694"/>
+                <SyncLoader size={8} color="#758694" />
                 <p className="font-semibold">Loading...</p>
               </div>
             }>
@@ -38,7 +38,7 @@ function App() {
           <Route path='/:Error' element={
             <Suspense fallback={
               <div className="h-screen w-screen bg-gradient-to-br from-slate-800 to-zinc-800 text-[#758694] flex gap-2 items-center justify-center">
-                <SyncLoader size={8} color="#758694"/>
+                <SyncLoader size={8} color="#758694" />
                 <p className="font-semibold">Loading...</p>
               </div>
             }>

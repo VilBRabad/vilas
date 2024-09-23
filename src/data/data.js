@@ -7,7 +7,7 @@ export const project_data = [
         github_link: "https://github.com/VilBRabad/VidStream-client",
         cover_video: "assets/vidstream_vid.webm",
         Logo: "assets/vidstream_logo.png",
-        home_img: "assets/vidstream_home.png",  
+        home_img: "assets/vidstream_home.png",
         second_img: "assets/vidstream_sec.png",
         description: "This project allows users to explore a vast library of movies, all categorized by genre and user ratings. Users can create personal accounts, enabling them to curate watchlists. Vidstream features a responsive and intuitive interface, ensuring that users can easily navigate through the content on any device. Additionally, Vidstream includes a robust search functionality, allowing users to find specific titles or discover new content through filters like genre, and ratings. This project is a comprehensive exploration of modern web development techniques.",
         functionalities: [
@@ -17,7 +17,7 @@ export const project_data = [
             "Make personal watchlist and manage it",
         ],
         tools: [
-            "React", "MongoDB", "Tailwind CSS", "Express", "Mongoose", "Cloudinary"
+            "React", "MongoDB", "Tailwind CSS", "Redux", "Express", "Mongoose", "JWT", "Cloudinary"
         ],
         diagram: {
             name: "User model diagram",
@@ -108,7 +108,8 @@ export const project_data = [
     },
 ]
 
-import { SiFlask, SiExpress, SiReact, SiMysql, SiPython, SiDjango, SiPrisma, SiTailwindcss, SiHtml5, SiNextdotjs, SiCss3, SiFigma, SiGraphql, SiReactquery, SiPostgresql, SiMongodb, SiMongoose, SiCloudinary } from "react-icons/si";
+import { color } from "framer-motion";
+import { SiFlask, SiExpress, SiReact, SiMysql, SiPython, SiJsonwebtokens, SiDjango, SiPrisma, SiTailwindcss, SiHtml5, SiNextdotjs, SiCss3, SiFigma, SiGraphql, SiReactquery, SiPostgresql, SiMongodb, SiMongoose, SiCloudinary, SiRedux } from "react-icons/si";
 
 export const icons = {
     React: {
@@ -180,11 +181,19 @@ export const icons = {
         color: "#8C0808"
     },
     Cloudinary: {
-        icon: SiCloudinary, 
+        icon: SiCloudinary,
         color: "#3A4EC7"
     },
     "AWS S3": {
         icon: null,
         color: "#FFFFFF"
-    }
+    },
+    JWT: {
+        icon: SiJsonwebtokens,
+        color: "#FFFFFFF"
+    },
+    Redux: {
+        icon: SiRedux,
+        color: "#A020F0"
+    },
 }

@@ -5,6 +5,7 @@ import { FaGithub } from "react-icons/fa";
 import { project_data } from "../data/data.js";
 const GetIcons = lazy(()=> import('./GetIcons.jsx'));
 import { motion } from 'framer-motion';
+import { Helmet } from "react-helmet-async";
 
 function ProjectDetails() {
     const location = useLocation();
@@ -18,6 +19,12 @@ function ProjectDetails() {
     }
 
   return (
+    <>
+    <Helmet>
+        <title>{project_data[id-1].title}</title>
+        <meta name='description' content={`Project: ${project_data[id-1].sort_hand}`}/>
+        <link rel="canonical" href={`https://vilas-steel.vercel.app/project?id=${id}`} />
+    </Helmet>
     <div className='min-h-screen w-screen text-white flex justify-center'>
         <div className='relative project-det-container mt-6 pb-14'>
             <div className="absolute left-2 z-50">
@@ -57,14 +64,17 @@ function ProjectDetails() {
                         whileInView={{opacity: 1}}
                         animate={{opacity: 1}}
                         transition={{ease: "easeInOut", duration: 0.5, delay: 0.3}}
-                        src={project_data[id-1].home_img} alt="" className='md:w-[40%] z-20'/>
+                        src={project_data[id-1].home_img} alt="" className='md:w-[40%] z-20'
+                        title='vidstream home page'
+                        loading='loding...'
+                        />
                     <motion.div 
                         initial={{opacity: 0}}
                         whileInView={{opacity: 1}}
                         animate={{opacity: 1}}
                         transition={{ease: "easeInOut", duration: 0.5, delay: 0.3}}
                         className='text-lg leading-relax z-10'>
-                        <p className='text-2xl font-bold mb-2'>Description</p>
+                        <h2 className='text-2xl font-bold mb-2'>Description</h2>
                         <p>
                             {project_data[id-1].description}
                         </p>
@@ -77,7 +87,7 @@ function ProjectDetails() {
                         animate={{opacity: 1}}
                         transition={{ease: "easeInOut", duration: 0.5, delay: 0.3}}
                         className='text-lg'>
-                        <p className='text-2xl font-bold'>Features</p>
+                        <h2 className='text-2xl font-bold'>Features</h2>
                         <ul className='list-disc ml-[1.2rem] mt-2 flex flex-col gap-2'>
                             {
                                 project_data[id-1].functionalities.map((feat, ind)=>(
@@ -91,14 +101,17 @@ function ProjectDetails() {
                         whileInView={{opacity: 1}}
                         animate={{opacity: 1}}
                         transition={{ease: "easeInOut", duration: 0.5, delay: 0.3}}
-                        src={project_data[id-1].second_img} alt="" className='md:w-[55%]'/>
+                        src={project_data[id-1].second_img} alt="" className='md:w-[55%]'
+                        title='vidstream login and other pages'
+                        loading='loding...'
+                        />
                 </div>
                 <motion.div 
                     initial={{opacity: 0}}
                     whileInView={{opacity: 1}}
                     transition={{ease: "easeInOut", duration: 0.5}}
                     className='flex flex-col gap-4 items-center mt-6 bg-white/10 py-6 backdrop-blur-sm'>
-                    <h1 className='text-2xl font-bold'>Tools Used</h1>
+                    <h2 className='text-2xl font-bold'>Tools Used</h2>
                     <div className="flex gap-4 justify-center px-6 flex-wrap">
                         {
                             project_data[id-1].tools.map((tool, ind)=>(
@@ -115,18 +128,21 @@ function ProjectDetails() {
                     </div>
                 </motion.div>
                 <div className=''>
-                    <motion.h1 
+                    <motion.h2 
                         initial={{opacity: 0, y: 50}}
                         whileInView={{opacity: 1, y:0}}
                         transition={{ease: "easeInOut", duration: 0.3, delay: 0.5}}
                         viewport={{once: true}}
-                        className='text-2xl font-semibold z-10'>{project_data[id-1].diagram.name}</motion.h1>
+                        className='text-2xl font-semibold z-10'>{project_data[id-1].diagram.name}</motion.h2>
                     <div className='z-20'>
                         <motion.img 
                             initial={{opacity: 0}}
                             whileInView={{opacity: 1}}
                             transition={{ease: "easeInOut", duration: 0.5}}
-                            src={project_data[id-1].diagram.link} alt="" />
+                            src={project_data[id-1].diagram.link} alt="" 
+                            title='vidstream user model diagram'
+                            loading='loding...'
+                            />
                     </div>
                 </div>
                 {project_data[id-1].note &&
@@ -137,6 +153,7 @@ function ProjectDetails() {
             </div>
         </div>
     </div>
+    </>
   )
 }
 

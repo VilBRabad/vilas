@@ -5,7 +5,7 @@ function Contact() {
     <div id='Contact' className='w-screen min-h-screen text-white flex flex-col items-center overflow-x-hidden'>
         <div className='mt-[6rem] h-full w-full flex flex-col items-center'>
             <div className='w-full flex items-center justify-center'>
-                <h1 className='text-2xl font-bold'>CONTACT</h1>
+                <h2 className='text-2xl font-bold'>CONTACT</h2>
             </div>
             <div className='conatai flex flex-col gap-6 items-center mt-[7rem]'>
                 <form className='contact-width flex flex-col items-center gap-4'>

@@ -21,7 +21,7 @@ function HomePage() {
             <Element name='About'>
                 <About2 />
             </Element>
-                <TechStack />
+            <TechStack />
             <Element name='Contact'>
                 <Contact />
             </Element>

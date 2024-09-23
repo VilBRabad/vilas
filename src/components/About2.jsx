@@ -52,12 +52,12 @@ function About2() {
                         className='h-[20rem] w-[20rem] sm:h-[28rem] sm:w-[28rem] z-10 max-sm:mt-[100%] bg-red-600 blur-[8rem]' />
                 </div>
                 <div className='relative w-full flex max-[590px]:justify-center z-20'>
-                    <motion.h1 
+                    <motion.h2 
                         variants={textAnimate}
                         initial="initial"
                         whileInView="whileInView"
                         exit="exit"
-                        className='text-4xl mb-2 font-bold text-white/80'>ME</motion.h1>
+                        className='text-4xl mb-2 font-bold text-white/80'>ME</motion.h2>
                 </div>
                 <div className='relative w-full grid gap-2 sm:gap-4 about-grid z-20'>
                     <motion.div 
