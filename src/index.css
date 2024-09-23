@@ -388,8 +388,6 @@ body{
     grid-column-start: 4;
     grid-row-start: 1;
   }
-  .grid-span:nth-child(8){
-  }
 }
 
 @media (min-width: 1015px){

@@ -1,35 +1,34 @@
 import React from 'react'
+import { BiLogoLinkedin, BiLogoGithub, BiLogoInstagram } from "react-icons/bi";
+import { GrMail } from "react-icons/gr";
 
 function Contact() {
   return (
-    <div id='Contact' className='w-screen min-h-screen text-white flex flex-col items-center overflow-x-hidden'>
-        <div className='mt-[6rem] h-full w-full flex flex-col items-center'>
-            <div className='w-full flex items-center justify-center'>
-                <h2 className='text-2xl font-bold'>CONTACT</h2>
+    <div id='Contact' className='mt-[6rem] w-screen text-white bg-zinc-950 flex flex-col items-center overflow-x-hidden'>
+        <div className='w-full flex items-center conta my-7 gap-8 max-sm:flex-wrap'>
+          <div className='text-[3rem] sm:text-[6rem] whitespace-normal font-extrabold text-white/80 flex flex-col max-[455px]:flex-row max-[455px]:gap-6'>
+              <p className='h-[4rem] sm:h-[6rem]'>LET'S</p>
+              <p>MEET</p>
+          </div>
+          <div className='w-1 bg-white/50 h-[10rem] max-[455px]:hidden'/>
+          <div>
+            <p className='text-xl font-semibold'>Vilas B. Rabad</p>
+            <p>Pune, India</p>
+            <div className='flex gap-3'>
+              <a href='https://www.linkedin.com/in/vilas-rabad-3a8081211' target='_blank' className='mt-4 bg-zinc-800 h-[3rem] w-[3rem] flex items-center justify-center rounded-full cursor-pointer transition hover:bg-[#0077B5]'>
+                <BiLogoLinkedin size={24}/>
+              </a>
+              <a href='https://github.com/VilBRabad' target='_blank' className='mt-4 bg-zinc-800 h-[3rem] w-[3rem] flex items-center justify-center rounded-full cursor-pointer transition hover:bg-[#000000]'>
+                <BiLogoGithub size={24}/>
+              </a>
+              <a href='https://www.instagram.com/vilbghost/' target='_blank' className='mt-4 bg-zinc-800 h-[3rem] w-[3rem] flex items-center justify-center rounded-full cursor-pointer transition hover:bg-[#E1306C]'>
+                <BiLogoInstagram size={24}/>
+              </a>
+              <a href='mailto:rabadvilas11@gmail.com' target='_blank' className='mt-4 bg-zinc-800 h-[3rem] w-[3rem] flex items-center justify-center rounded-full cursor-pointer transition hover:bg-[#c71610]'>
+                <GrMail size={22}/>
+              </a>
             </div>
-            <div className='conatai flex flex-col gap-6 items-center mt-[7rem]'>
-                <form className='contact-width flex flex-col items-center gap-4'>
-                  <input type="text" placeholder='Enter name' className='h-[2.8rem] w-full px-4 outline-0 bg-slate-800'/>
-                  <input type="email" placeholder='Enter email' className='h-[2.8rem] w-full px-4 outline-0 bg-slate-800'/>
-                  <textarea name="message" placeholder='Type message' className='w-full outline-0 bg-slate-800 p-4 h-[12rem]' id=""></textarea>
-                  <button type="submit" className='bg-violet-900 py-3 w-full text-lg font-semibold'>SEND</button>
-                </form>
-                <p className='text-lg'>OR</p>
-                <div className='relative bg-gradient-to-br flex justify-between items-center from-white to-zinc-500 rounded-lg h-[8rem] contact-width text-black px-4 [417px]:px-8'>
-                  <div>
-                    <p className='text-lg'>Vilas Rabad</p>
-                    <p className='text-lg'>Mobile No.: +91 7387410172</p> 
-                    <p className='text-lg'>Email id: rabadvilas11@gmail.com</p>
-                  </div>
-                  <div className='mr-6 h-full flex items-center justify-center'>
-                    <p className='-rotate-90 font-bold text-xl'>CARD</p>
-                  </div>
-                  <div className='absolute h-full right-8 flex gap-1'>
-                    <div className='h-full w-[0.5rem] bg-green-800'/>
-                    <div className='h-full w-[0.5rem] bg-orange-800'/>
-                  </div>
-                </div>
-            </div>
+          </div>
         </div>
     </div>
   )
