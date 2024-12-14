@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 function Home() {
   return (
-    <div id='Home' className='relative h-screen w-screen px-24 text-white flex flex-col items-center justify-center'>
+    <div id='Home' className='relative h-screen w-screen sm:px-24 text-white flex flex-col items-center justify-center'>
       <motion.div
         initial={{ opacity: 1, y: -500 }}
         animate={{ opacity: 1, y: 0 }}
@@ -15,29 +15,29 @@ function Home() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeInOut", duration: 0.5 }}
-          className='text-3xl'>Hello, this is</motion.p>
+          className='text-xl md:text-3xl'>Hello, this is</motion.p>
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeInOut", duration: 0.7 }}
-          className='text-[3rem] font-bold leading-none'>Vilas Rabad</motion.h1>
+          className='text-[2.8rem] text-nowrap md:text-[3rem] font-semibold leading-none'>Vilas Rabad</motion.h1>
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeInOut", duration: 0.9 }}
-          className='text-[3.5rem] text-white/80 font-bold leading-none text-center'>A React Developer</motion.h2>
+          className='text-[2rem] md:text-[3.5rem] text-white/80 font-bold leading-none text-center'>A React Developer</motion.h2>
         <motion.p
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeInOut", duration: 1.1 }}
-          className='text-3xl text-center'>Build websites and mobile applications</motion.p>
+          className='text-center w-[85%] sm:w-[95%] md:w-[70%] text-slate-400 leading-relaxed font-semibold'>Building websites and mobile applications using react technology with other latest tools/tech and libraries</motion.p>
       </div>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ ease: "easeInOut", duration: 1.3 }}
         className='absolute bottom-8 animate-bounce'>
-        <IoArrowDown size={45} color='grey' />
+        <IoArrowDown size={40} color='grey' />
       </motion.div>
     </div>
   )

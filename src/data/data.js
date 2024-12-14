@@ -5,7 +5,7 @@ export const project_data = [
         sort_hand: "A film streaming platform",
         date: "20 Aug 2024",
         github_link: "https://github.com/VilBRabad/VidStream-client",
-        cover_video: "assets/vidstream_vid.webm",
+        cover_video: "https://res.cloudinary.com/dr91ybej4/video/upload/f_auto:video,q_auto/9a01dec781d085583db655cc13738f2f",
         Logo: "assets/vidstream_logo.png",
         home_img: "assets/vidstream_home.png",
         second_img: "assets/vidstream_sec.png",

@@ -7,8 +7,8 @@ function GetIcons({ iconName }) {
     const color = icons[iconName].color;
     console.log(iconName);
     return (
-        Icon?
-            <Icon size={50} color={color}/>
+        Icon ?
+            <Icon size={50} color={color} />
             :
             <div className='flex items-center text-xl font-semibold'>
                 <p>{iconName}</p>

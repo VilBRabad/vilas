@@ -1,5 +1,5 @@
 import React from 'react'
-import {IoArrowBack} from "react-icons/io5"
+import { IoArrowBack } from "react-icons/io5"
 import { Link } from 'react-router-dom'
 
 function Error() {

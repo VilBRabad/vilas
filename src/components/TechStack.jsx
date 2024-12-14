@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 const programing_languages = [
   "C++", "Javascript", "Python", "Java", "Typescript",
   "HTML", "CSS", "ReactJs", "Tailwind CSS", "Redux",
-  "Node.js", "Express.js", "Prisma", "GraphQL", "Mongoose", "MongoDB", "MySQL", "AWS S3",
+  "Node.js", "Express.js", "Prisma", "GraphQL", "React-Native", "MongoDB", "MySQL", "Docker",
   "Git/Github", "Postman", "Figma", "VS Code"
 ]
 
@@ -37,11 +37,11 @@ function TechStack() {
         <div className='relative mt-16 grid-conatiner '>
           {
             programing_languages.map((tool, ind) => (
-              <motion.div 
-                initial={{scale: '0%', opacity: 0}}
-                whileInView={{scale: '100%', opacity: 1}}
-                exit={{scale: '0%', opacity: 0}}
-                transition={{ease: "easeIn", duration: 0.5}}
+              <motion.div
+                initial={{ scale: '0%', opacity: 0 }}
+                whileInView={{ scale: '100%', opacity: 1 }}
+                exit={{ scale: '0%', opacity: 0 }}
+                transition={{ ease: "easeIn", duration: 0.5 }}
                 key={ind} className='items hover:shadow-2xl flex items-center justify-center'>
                 <p className='text-xl font-semibold'>{tool}</p>
               </motion.div>
