@@ -166,7 +166,7 @@ function About2() {
                         exit={{ opacity: 0 }}
                         transition={{ ease: "easeInOut", duration: 1 }}
                         className='grid-span bg-slate-900 p-4 flex items-center justify-center'>
-                        <a href='https://drive.google.com/file/d/1Qd91paCIoOZkZPBAqs86dUCseVPKkhyF/view?usp=sharing' target='_blank' className='text-[2rem] md:text-[3rem] font-bold'>CV</a>
+                        <a href='https://drive.google.com/file/d/1AqJsvJ8Q6mTNhcCtvU965E_FR_9XHsDb/view?usp=drive_link' target='_blank' className='text-[2rem] md:text-[3rem] font-bold'>CV</a>
                     </motion.div>
                     <motion.div
                         initial={{ opacity: 0 }}
