@@ -4,10 +4,11 @@ import frame from "/assets/mac_layout.png";
 import { useNavigate } from 'react-router-dom';
 import { project_data } from "../data/data.js";
 import { motion } from 'framer-motion';
-import { SyncLoader } from "react-spinners";
+import ImageWithLoading from './ImageWithLoading.jsx';
 
 function Projects() {
-    const [isLoading, setLoading] = useState(true);
+    const [isLoading1, setLoading1] = useState(true);
+    const [isLoading2, setLoading2] = useState(true);
     const [areVisible, setVisible] = useState(false);
 
     const navigate = useNavigate();
@@ -23,7 +24,26 @@ function Projects() {
                 <div className='relative w-full flex max-lg:flex-col items-center lg:h-[45rem] xl:h-[40rem] gap-5 lg:pl-10 md:py-7 pt-7 pb-2'>
                     <div className='relative lg:h-full flex items-center justify-center h-[30rem] md:h-[40rem] w-auto lg:w-[35%]'>
                         <img src="/assets/mobile_frame.svg" alt="" className='absolute w-[30rem] h-[97.5%] z-20' />
-                        <video src="https://res.cloudinary.com/dr91ybej4/video/upload/f_auto:video,q_auto/ad9f2f608c52263e1a095d140ee75890" className='relative h-[95%] w-[28rem] z-10' autoPlay muted loop type="video/webm" />
+                        <video
+                            src="https://res.cloudinary.com/dr91ybej4/video/upload/f_auto:video,q_auto/ad9f2f608c52263e1a095d140ee75890"
+                            onLoadedData={() => setLoading1(false)}
+                            onError={() => console.error("Video failed to load")}
+                            className="relative h-[95%] w-[28rem] z-10"
+                            autoPlay
+                            muted
+                            loop
+                            type="video/webm"
+                        />
+                        {
+                            isLoading1 && (
+                                <div
+                                    className="relative h-[95%] w-[28rem] z-10 bg-gray-300 animate-pulse rounded"
+                                    aria-busy="true"
+                                    aria-hidden="true"
+                                />
+                            )
+                        }
+
                     </div>
                     <div className='h-full p-5 lg:w-[60%]'>
                         <h1 className='text-2xl font-bold'>Ventures</h1>
@@ -95,45 +115,34 @@ function Projects() {
                     </div>
                     <div className='relative translate-y-1 mt-16 lg:mt-4 flex flex-col items-center justify-end lg:h-[38rem] h-auto w-[90%] lg:w-auto w-fit'>
                         <img src={frame} className='absolute lg:h-[38.6rem] w-[91%] lg:w-[100%]  -bottom-2 z-20' alt="" />
-                        {
-                            isLoading &&
-                            <div className='relative lg:h-[34rem] w-[90%] lg:w-[98.7%] z-10 bg-gray-600/40 flex items-center justify-center'>
-                                <SyncLoader size={8} color="#758694" />
-                            </div>
-                        }
-                        <video src={project_data[0].cover_video} onLoadedData={() => setLoading(false)} className='relative lg:h-[34rem] w-[90%] lg:w-[98.7%] z-10' autoPlay muted loop type="video/webm" />
+                        <video
+                            src={project_data[0].cover_video}
+                            onLoadedData={() => setLoading2(false)}
+                            onError={() => console.error("Video failed to load")}
+                            className="relative lg:h-[34rem] w-[90%] lg:w-[98.7%] transition duration-150 z-10"
+                            autoPlay
+                            muted
+                            loop
+                            type="video/webm"
+                        />
+                        {isLoading2 && (
+                            <div
+                                className="relative lg:h-[34rem] w-[90%] lg:w-[98.7%] z-10 bg-gray-300 animate-pulse rounded"
+                                aria-busy="true"
+                                aria-hidden="true"
+                            />
+                        )}
                     </div>
                 </div>
             </div>
             <div className={`relative other-project-container flex gap-3 ${areVisible ? "h-auto" : "max-md:h-[10rem] overflow-hidden"} max-[1136px]:justify-center justify-between flex-wrap`}>
                 {
                     project_data.slice(1).map((proj, ind) => (
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
-                            transition={{ ease: "easeInOut", duration: 0.5 }}
-                            exit={{ opacity: 0 }}
-                            onClick={() => toProjectDetails(ind + 2)} key={proj.id} className={`${(ind > 0 && !areVisible) ? "max-md:hidden" : "flex"} md:flex card cursor-pointer relative h-auto w-[22rem] p-[1px] overflow-hidden items-center justify-center rounded-xl bg-gradient-to-r from-zinc-500 via-zinc-500 hover:via-white to-zinc-500 hover:to-zinc-500`}>
-                            <div className="absolute bg-[#000A25] h-[99%] w-[99%] rounded-[0.7rem]" />
-                            <div className="absolute color-change h-[99%] w-[99%] rounded-[0.7rem]" />
-                            <div className='relative overflow-hidden flex flex-col items-center'>
-                                <div className='relative flex mt-7 justify-center'>
-                                    <img src={proj.cover_video} alt="" className=' w-[90%] transtion duration-150' />
-                                    <div className="absolute -bottom-1 h-[3rem] w-[99.5%] bg-gradient-to-b from-black/0 to-black" />
-                                </div>
-                                <div className='min-h-[11.5rem] w-[99.5%] bg-zinc-800 p-3 rounded-b-[0.7rem]'>
-                                    <p className='text-lg font-semibold'>{proj.title}</p>
-                                    <p className='text-zinc-400'>{proj.sort_hand} -  {proj.date}</p>
-                                    <div className='flex gap-2 flex-wrap mt-1'>
-                                        {
-                                            proj.tools.map((tool, ind) => (
-                                                <p key={ind} className='px-4 py-1 bg-zinc-500/40 rounded-full text-sm'>{tool}</p>
-                                            ))
-                                        }
-                                    </div>
-                                </div>
-                            </div>
-                        </motion.div>
+                        <ImageWithLoading
+                            toProjectDetails={toProjectDetails}
+                            proj={proj}
+                            areVisible={areVisible}
+                        />
                     ))
                 }
                 <div onClick={() => setVisible(pre => !pre)} className={`absolute ${areVisible ? "hidden" : "block"} md:hidden bg-gradient-to-b from-[#000A25]/0 via-[#000A25]/50 to-[#000A25] h-[6rem] w-full bottom-0 flex items-center justify-center pt-12 font-bold`}>
