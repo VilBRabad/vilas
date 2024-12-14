@@ -15,7 +15,7 @@ function ImageWithLoading({ toProjectDetails, proj, ind, areVisible }) {
             <div className='relative overflow-hidden flex flex-col justify-between items-center'>
                 <div className='relative flex mt-7 justify-center'>
                     {isLoading && <div className="w-[90%] h-[200px] bg-gray-300 animate-pulse rounded"></div>}
-                    <img src={proj.cover_video} onLoadedData={() => setLoading(false)} on alt="" className=' w-[90%] transtion duration-150' />
+                    <img src={proj.cover_video} onLoad={() => setLoading(false)} on alt="" className=' w-[90%] transtion duration-150' />
                     <div className="absolute -bottom-1 h-[3rem] w-[99.5%] bg-gradient-to-b from-black/0 to-black" />
                 </div>
                 <div className='min-h-[11.5rem] w-[99.5%] bg-zinc-800 p-3 rounded-b-[0.7rem]'>
