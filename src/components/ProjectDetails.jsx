@@ -11,8 +11,8 @@ function ProjectDetails() {
     const location = useLocation();
     const navigate = useNavigate();
     const param = new URLSearchParams(location.search);
-    const id = param.get('id');
-
+    const id = param.get('title');
+    console.log(id);
     if (!id) navigate('/');
     const cli = () => {
         navigate(-1);
@@ -25,20 +25,20 @@ function ProjectDetails() {
     return (
         <>
             <Helmet>
-                <title>{project_data[id - 1].title}</title>
-                <meta name="description" content={`Project: ${project_data[id - 1].sort_hand}`} />
+                <title>{project_data[id].title}</title>
+                <meta name="description" content={`Project: ${project_data[id].sort_hand}`} />
                 <link rel="canonical" href={`https://vilas-steel.vercel.app/project?id=${id}`} />
 
-                <meta property="og:title" content={project_data[id - 1].title} />
-                <meta property="og:description" content={project_data[id - 1].sort_hand} />
+                <meta property="og:title" content={project_data[id].title} />
+                <meta property="og:description" content={project_data[id].sort_hand} />
                 <meta property="og:image" content="https://vilas-steel.vercel.app/project.png" />
                 <meta property="og:url" content={`https://vilas-steel.vercel.app/project?id=${id}`} />
                 <meta property="og:type" content="website" />
 
                 <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:url" content={`https://vilas-steel.vercel.app/project?id=${id}`} />
-                <meta property="twitter:title" content={project_data[id - 1].title} />
-                <meta property="twitter:description" content={project_data[id - 1].sort_hand} />
+                <meta property="twitter:title" content={project_data[id].title} />
+                <meta property="twitter:description" content={project_data[id].sort_hand} />
                 <meta property="twitter:image" content="https://vilas-steel.vercel.app/project.png" />
             </Helmet>
 
@@ -58,18 +58,18 @@ function ProjectDetails() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ ease: "easeInOut", duration: 0.5 }}
-                            className='text-2xl 2xl:text-3xl font-bold'>{project_data[id - 1].title}</motion.h1>
+                            className='text-2xl 2xl:text-3xl font-bold'>{project_data[id].title}</motion.h1>
                         <motion.p
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ ease: "easeInOut", duration: 0.5, delay: 0.2 }}
-                            className='text-zinc-400 2xl:text-lg text-center'>{project_data[id - 1].sort_hand} - {project_data[id - 1].date}</motion.p>
+                            className='text-zinc-400 2xl:text-lg text-center'>{project_data[id].sort_hand} - {project_data[id].date}</motion.p>
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ ease: "easeInOut", duration: 0.5, delay: 0.4 }}
                             className='absolute max-[509px]:bottom-2 max-[509px]:right-auto right-0'>
-                            <a target='_blank' href={project_data[id - 1].github_link}>
+                            <a target='_blank' href={project_data[id].github_link}>
                                 <FaGithub size={28} className='cursor-pointer' />
                             </a>
                         </motion.div>
@@ -81,7 +81,7 @@ function ProjectDetails() {
                                 whileInView={{ opacity: 1 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ ease: "easeInOut", duration: 0.5, delay: 0.3 }}
-                                src={project_data[id - 1].home_img} alt="" className='md:w-[40%] z-20'
+                                src={project_data[id].home_img} alt="" className='md:w-[40%] z-20'
                                 title='vidstream home page'
                                 loading='loding...'
                             />
@@ -93,7 +93,7 @@ function ProjectDetails() {
                                 className='text-lg leading-relax z-10'>
                                 <h2 className='text-2xl font-bold mb-2'>Description</h2>
                                 <p>
-                                    {project_data[id - 1].description}
+                                    {project_data[id].description}
                                 </p>
                             </motion.div>
                         </div>
@@ -107,7 +107,7 @@ function ProjectDetails() {
                                 <h2 className='text-2xl font-bold'>Features</h2>
                                 <ul className='list-disc ml-[1.2rem] mt-2 flex flex-col gap-2'>
                                     {
-                                        project_data[id - 1].functionalities.map((feat, ind) => (
+                                        project_data[id].functionalities.map((feat, ind) => (
                                             <li key={ind}>{feat}</li>
                                         ))
                                     }
@@ -118,7 +118,7 @@ function ProjectDetails() {
                                 whileInView={{ opacity: 1 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ ease: "easeInOut", duration: 0.5, delay: 0.3 }}
-                                src={project_data[id - 1].second_img} alt="" className='md:w-[55%]'
+                                src={project_data[id].second_img} alt="" className='md:w-[55%]'
                                 title='vidstream login and other pages'
                                 loading='loding...'
                             />
@@ -131,7 +131,7 @@ function ProjectDetails() {
                             <h2 className='text-2xl font-bold'>Tools Used</h2>
                             <div className="flex gap-4 justify-center px-6 flex-wrap">
                                 {
-                                    project_data[id - 1].tools.map((tool, ind) => (
+                                    project_data[id].tools.map((tool, ind) => (
                                         <>
                                             <Suspense key={ind} fallback={
                                                 <div className='bg-zinc-600 h-[3.5rem] w-[3.5rem] rounded-full animate-pulse' />
@@ -150,21 +150,21 @@ function ProjectDetails() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ ease: "easeInOut", duration: 0.3, delay: 0.5 }}
                                 viewport={{ once: true }}
-                                className='text-2xl font-semibold z-10'>{project_data[id - 1].diagram.name}</motion.h2>
+                                className='text-2xl font-semibold z-10'>{project_data[id].diagram.name}</motion.h2>
                             <div className='z-20'>
                                 <motion.img
                                     initial={{ opacity: 0 }}
                                     whileInView={{ opacity: 1 }}
                                     transition={{ ease: "easeInOut", duration: 0.5 }}
-                                    src={project_data[id - 1].diagram.link} alt=""
+                                    src={project_data[id].diagram.link} alt=""
                                     title='vidstream user model diagram'
                                     loading='loding...'
                                 />
                             </div>
                         </div>
-                        {project_data[id - 1].note &&
+                        {project_data[id].note &&
                             <div className='relative'>
-                                <p className='absolute right-0 text-lg text-zinc-400'>{project_data[id - 1].note}</p>
+                                <p className='absolute right-0 text-lg text-zinc-400'>{project_data[id].note}</p>
                             </div>
                         }
                     </div>

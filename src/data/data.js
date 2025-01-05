@@ -1,5 +1,5 @@
-export const project_data = [
-    {
+export const project_data = {
+    "vidstream": {
         id: 1,
         title: "Vidstream",
         sort_hand: "A film streaming platform",
@@ -25,7 +25,7 @@ export const project_data = [
         },
         note: "UI inspired from crunchyroll and netflix"
     },
-    {
+    "twitter-clone": {
         id: 2,
         title: "Twitter Clone",
         sort_hand: "Social media platoform - clone of twitter",
@@ -52,7 +52,7 @@ export const project_data = [
         },
         note: null
     },
-    {
+    "donate-me": {
         id: 3,
         title: "Donate.me",
         sort_hand: "Blood management system",
@@ -80,9 +80,9 @@ export const project_data = [
         },
         note: null
     },
-    {
+    "big-mart-sales-visualizer": {
         id: 4,
-        title: "Big-Mart Sales Visualization",
+        title: "Big-Mart Sales Visualizer",
         sort_hand: "A data visualization platform",
         date: "29 May 2023",
         github_link: "https://github.com/VilBRabad/Big-Mart-Sales-Visualization",
@@ -106,7 +106,7 @@ export const project_data = [
         },
         note: null
     },
-]
+}
 
 import { color } from "framer-motion";
 import { SiFlask, SiExpress, SiReact, SiMysql, SiPython, SiJsonwebtokens, SiDjango, SiPrisma, SiTailwindcss, SiHtml5, SiNextdotjs, SiCss3, SiFigma, SiGraphql, SiReactquery, SiPostgresql, SiMongodb, SiMongoose, SiCloudinary, SiRedux } from "react-icons/si";
