@@ -17,7 +17,7 @@ function Projects() {
     }
 
     return (
-        <div id='Projects' className='relative w-screen min-h-screen text-white flex flex-col items-center gap-8 mb-4'>
+        <div id='Projects' className='relative w-screen min-ht text-white flex flex-col items-center gap-8 mb-4'>
             <div className="relative main-container1 p-2 flex flex-col items-center justify-center rounded-xl md:rounded-[1.8rem] overflow-hidden bg-gradient-to-r from-zinc-500/50 via-white/50 transition-all duration-500 delay-500 hover:via-white hover:to-zinc-500/50 to-zinc-500/50 z-20">
                 <div className='absolute w-[99.4%] h-[99.7%] lg:h-[99%] bg-[#000A25] rounded-xl md:rounded-[1.7rem]'></div>
                 <div className='absolute w-[99.4%] h-[99.7%] lg:h-[99%] color-changer rounded-xl md:rounded-[1.7rem]'></div>
@@ -141,6 +141,7 @@ function Projects() {
                         <ImageWithLoading
                             toProjectDetails={toProjectDetails}
                             proj={proj}
+                            ind={ind}
                             areVisible={areVisible}
                         />
                     ))

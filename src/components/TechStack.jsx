@@ -18,7 +18,7 @@ function TechStack() {
   }
 
   return (
-    <div id='Teckstack' className='w-screen min-h-screen text-white flex flex-col items-center overflow-x-hidden'>
+    <div id='Teckstack' className='w-screen min-ht text-white flex flex-col items-center overflow-x-hidden'>
       <div className='relative mt-[6rem] h-full w-full flex flex-col items-center'>
         <div className='w-full flex items-center justify-center'>
           <motion.h2

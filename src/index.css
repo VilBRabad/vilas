@@ -36,6 +36,11 @@ body {
 }
 
 
+.min-ht {
+  min-height: min(100vh, 60rem);
+}
+
+
 
 .hover-gradient {
   background-image: radial-gradient(#000A25);

@@ -40,7 +40,7 @@ function About2() {
 
 
     return (
-        <div id="About" className='w-screen min-h-screen text-white overflow-x-hidden flex flex-col items-center gap-8 mt-8 mb-4'>
+        <div id="About" className='w-screen min-ht text-white overflow-x-hidden flex flex-col items-center gap-8 mt-8 mb-4'>
             <div className='relative mt-[6rem] about-conatiner'>
                 <div
                     className="absolute h-full w-full flex sm:items-center ml-[25%]">
