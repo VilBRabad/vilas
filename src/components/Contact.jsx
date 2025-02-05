@@ -13,7 +13,8 @@ function Contact() {
         <div className='w-1 bg-white/50 h-[10rem] max-[455px]:hidden' />
         <div>
           <p className='text-xl font-semibold'>Vilas B. Rabad</p>
-          <p>Pune, India</p>
+          <p className='mt-1'>Pune, India</p>
+          <p className='mt-1'>+91 73874 10172</p>
           <div className='flex gap-3'>
             <a href='https://www.linkedin.com/in/vilas-rabad-3a8081211' target='_blank' className='mt-4 bg-zinc-800 h-[3rem] w-[3rem] flex items-center justify-center rounded-full cursor-pointer transition hover:bg-[#0077B5]'>
               <BiLogoLinkedin size={24} />
