@@ -5,10 +5,10 @@ import { IoCheckmarkOutline } from "react-icons/io5";
 
 function Experience() {
   return (
-    <section className='py-10 w-full font-[family-name:var(--font-ubuntu-sans)] mb-16'>
+    <section id="experience" className='py-10 w-full font-[family-name:var(--font-ubuntu-sans)] mb-16'>
         <div>
             <h2 className='text-4xl font-bold'>Education & Experience</h2>
-            <span className='my-1 text-lg font-semibold text-(--blue-color)'>my life</span>
+            <span className='my-1 text-lg font-semibold text-(--blue-color)'>Steps of my journey</span>
         </div>
         <div className='mt-10 w-full max-h-[30rem]'>
             <div className='w-full px-14 grid grid-cols-8'>
@@ -43,7 +43,7 @@ function Experience() {
                 </div>
                 <div className='col-span-6 pl-14 mt-10'>
                     <h3 className='text-xl font-semibold text-white'>Vishwakarma Institute of Information Technology (VIIT), Pune</h3>
-                    <p className='text-(--gray-color) text-[15px]'>26 Aug 2021 -- Present</p>
+                    <p className='text-(--gray-color) text-[15px]'>Bachelor of Technology - IT | 26 Aug 2021 -- Present</p>
                     <p className='text-(--gray-color) text-[16px]'>Pune</p>
                 </div>
             </div>

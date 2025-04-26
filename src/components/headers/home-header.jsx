@@ -6,27 +6,27 @@ import React from 'react'
 const navItems = [
     {
         title: "About",
-        href: "/"
+        href: "#about"
     },
     {
         title: "Projects",
-        href: "/"
+        href: "#projects"
     },
     {
         title: "Journey",
-        href: "/"
+        href: "#experience"
     },
     {
         title: "Skills",
-        href: "/"
+        href: "#skills"
     },
 ]
 
 function HomeHeader() {
   return (
     <header className='w-full flex justify-end'>
-        <nav className='h-[3.4rem] flex items-center px-7 pr-1 gap-8 my-3 bg-[#27272A] border border-[#464646] rounded-[14px] font-[family-name:var(--font-ubuntu-sans)]'>
-            <h1 className='text-md font-bold cursor-pointer'>Vilas Rabad</h1>
+        <nav className='h-[3rem] lg:h-[3.4rem] flex items-center px-7 pr-1 gap-8 my-3 bg-[#27272A] border border-[#464646] rounded-[14px] font-[family-name:var(--font-ubuntu-sans)]'>
+            <h1 className='text-md font-bold cursor-pointer text-nowrap'>Vilas Rabad</h1>
             <ul className='flex'>
                 {
                     navItems.map((item) => (
